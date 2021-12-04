@@ -1,0 +1,20 @@
+Install SQL Express 2016
+Install SQL Server Management Studio
+Import/ Restore Database DB_Intranet_KBUNL
+Create new Database User db_intranet from security > Login > New User
+Create username double click > User Mapping > select database > choose db_owner and public
+
+Configure IIS. Add IIS Roles.
+Check ASP.NET option. After clicking on ASP.NET option ISAPI Filters, ISAPI Extensions, .NET Extensibility options will be selected automatically.
+
+IIS Create new website > unassigned ip
+
+
+In web.config correct the connection string for database.
+
+Data Source= whatever server name 
+Initial Catalog = database name
+
+
+
+#######################

@@ -1,0 +1,90 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="admin_Admin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Admin Panel</title>
+    <link href="css/AdminStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="csss/Innerforms.css" rel="stylesheet" type="text/css" />
+    <link href="csss/alert.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
+    <style type="text/css">
+        .topbar .box .RHS .changepassword {
+            background-image: none;
+            padding-left: 0;
+        }
+
+        .topbar .box .RHS .logout {
+            background-image: none;
+            padding-left: 0;
+        }
+
+        a, div, object, h1, h2, h3, h4, h5, h6 {
+            outline: none;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:HiddenField ID="hfUserID" runat="server" />
+        <asp:HiddenField ID="hdfUserName" runat="server" />
+        <asp:HiddenField ID="hdfEmployee_Id" runat="server" />
+         <asp:HiddenField ID="hdfDepartmentName" runat="server" />
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div class="box">
+                <div class="LHS">
+                    <div class="brand">Admin Panel</div>
+                </div>
+                <div class="RHS">
+                    <div class="user">
+                        Welcome  
+                    <asp:Label ID="lblEmpName" runat="server" Text=" "></asp:Label>
+                    </div>
+                    <a class="changepassword" href="emp-profile-update.aspx" id="empprofileupdate" runat="server">Update Profile</a>
+                    <a class="changepassword" href="hop-update-passcode.aspx" id="hopchangepass" runat="server">Change HOP Password</a>
+                    <a class="changepassword" href="admin-change-pass.aspx" id="adminchangepassword" runat="server">Change Password</a>
+                    <a class="changepassword" href="emp-change-pass.aspx" id="empchangepassword" runat="server">Change Password</a>
+                    <asp:LinkButton ID="LinkButton1" class="logout" OnClick="LinkButton1_Click" runat="server" ValidationGroup="NA">Logout</asp:LinkButton>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <asp:UpdatePanel ID="updatepnl" runat="server">
+            <ContentTemplate>
+                <!-- Admin Content -->
+                <div class="admincontent">
+                    <div class="left" style="min-height:800px;background-color:#333A41;">
+                        <%--<asp:Literal ID="ltrMenu" runat="server"></asp:Literal>--%>
+                        <asp:Repeater ID="rptModuleGroup" runat="server" OnItemDataBound="rptModuleGroup_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="menublock" id="menublock_home" runat="server">
+                                    <h3><asp:Label ID="lblModuleGroup" runat="server" Text='<%#Eval("GroupName")%>'></asp:Label></h3>
+                                    <ul>
+                                    <asp:Repeater ID="rptModule" runat="server">
+                                        <ItemTemplate>
+                                            <asp:HiddenField ID="hdfLinkURL" runat="server" Value='<%#Eval("ModuleURL")%>' />
+                                            <li id="li1" runat="server"><asp:LinkButton ID="lnkbtnModule" runat="server" CssClass="menu_companyusers" Text='<%#Eval("ModuleName")%>' OnClick="lnkbtnModule_Click" ValidationGroup="NA"></asp:LinkButton></li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    </ul>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <div class="right">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+
+</html>

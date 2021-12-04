@@ -1,0 +1,14 @@
+/* Basic jQuery Slider essential styles */
+
+ul.slider{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none; border-radius: 5px; border:1px solid #bdbdbd;}
+li.slider-slide{position:absolute; display:none;}
+ul.slider-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.slider-controls.v-centered li a{position:absolute;}
+ul.slider-controls.v-centered li a:hover{}
+ul.slider-controls.v-centered li.slider-next a{right:0;top:40%!important;}
+ul.slider-controls.v-centered li.slider-prev a{left:0; top:40%!important;}
+ol.slider-markers{list-style: none; padding: 0; margin: 0; width:100%; position:absolute; bottom:0; right:0; margin-bottom:10px;}
+ol.slider-markers.h-centered{text-align: right;}
+ol.slider-markers li{display:inline;}
+ol.slider-markers li a{display:inline-block; }
+p.slider-caption{display:block;width:100%;margin:0;padding:2%;position:absolute;bottom:0;}

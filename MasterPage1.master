@@ -1,0 +1,486 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeFile="MasterPage1.master.cs"
+    Inherits="MasterPage1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="modal/jquery.min.js" type="text/javascript"></script>
+<script src="modal/ddsmoothmenu.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+</script> 
+    <meta content='IE=Edge' http-equiv='X-UA-Compatible'/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+    <link href="StyleSheet1.css" rel="Stylesheet" type="text/css" />
+    
+    <script src="menuScript.js" type="text/javascript"></script>
+    <title>Welcome to KBUNL(A Subsidiary of NTPC Ltd.)</title>
+    <!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  >
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        
+    </asp:ScriptManager>
+    <div class="page" >
+        <div class="header">
+            <%--<asp:Image ID="Image1" runat="server" Width="100%" Height="60px" ImageUrl="~/Image/Kanti Bijlee Utpadan Nigam Limited5666.bmp" />--%>
+            <div id="header_text" >
+            <span><img style=" border-radius:7px; position:relative; left:-40px;" alt="img" width="80px" height="60px" src="images/kbunl.gif" /></span>
+               
+            <span style=" position:relative; right:48px; bottom:15px; font-size:100%;">
+                <script type="text/javascript" language="JavaScript1.2">
+                    var message = "Kanti Bijlee Utpadan Nigam Limited"
+                    var neonbasecolor = "gray"
+                    var neontextcolor = "#1e5799"
+                    var flashspeed = 250  //in milliseconds
+
+                    ///No need to edit below this line/////
+
+                    var n = 0
+                    if (document.all || document.getElementById) {
+                        document.write('<font color="' + neonbasecolor + '">')
+                        for (m = 0; m < message.length; m++)
+                            document.write('<span id="neonlight' + m + '">','<u>' + message.charAt(m) + '</u>','</span>')
+                        document.write('</font>')
+                    }
+                    else
+                        document.write(message)
+
+                    function crossref(number) {
+                        var crossobj = document.all ? eval("document.all.neonlight" + number) : document.getElementById("neonlight" + number)
+                        return crossobj
+                    }
+
+                    function neon() {
+
+                        //Change all letters to base color
+                        if (n == 0) {
+                            for (m = 0; m < message.length; m++)
+                            //eval("document.all.neonlight"+m).style.color=neonbasecolor
+                                crossref(m).style.color = neonbasecolor
+                        }
+
+                        //cycle through and change individual letters to neon color
+                        crossref(n).style.color = neontextcolor
+
+                        if (n < message.length - 1)
+                            n++
+                        else {
+                            n = 0
+                            clearInterval(flashing)
+                            setTimeout("beginneon()", 1500)
+                            return
+                        }
+                    }
+
+                    function beginneon() {
+                        if (document.all || document.getElementById)
+                            flashing = setInterval("neon()", flashspeed)
+                    }
+                    beginneon()
+                </script>
+            </span>
+            <span><img style=" border-radius:7px; position:relative; bottom:70px; left:440px;" alt="img" width="80px" height="60px" src="images/ntpc.gif" /></span>
+               <span><a style=" border-radius:7px; position:absolute; bottom:6px; left:30px; font-size:15px;" alt="English Version"  href="Default.aspx" /><img alt="img" width="100px" height="25px" src="images/home3.png" /></a></span> 
+                <span><a style=" border-radius:7px; position:absolute; bottom:10px; left:840px; font-size:15px;" alt="English Version"  href="http://10.1.168.1/default.aspx" />हिन्दी संस्करण</span>
+            </div>
+        </div>
+        <div class="hideSkiplink" >
+            <div id="nav" class="headerNew" >
+                <div id="kbunlmenu" class="ddmenu" >
+                <ul id="qm0" class="qmmc qm-horizontal-c">
+          <!--          <li class="dropdown"><a class="qmitem-m qmparent" href="Default.aspx">Home</a></li>     -->
+                      <li class="dropdown"><a  class="qmitem-m qmparent opener">CEO Dashboard</a>
+                    <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">EEMG</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">ROPR</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">ORT Report</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">PERF Report</a>
+                                                      <ul class="qmsub">
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Daily</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.1/database/eemg_monthly_report/April_2021.pdf">Monthly</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Yearly</a></li>
+                                                      </ul>
+                                                      </li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Licence Document</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">TECH AUDIT</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">EFF TEST</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">BUSSINESS PLAN</a>
+                                     <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">EMG - AU</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="#">SPCB Report</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="#">BIO-WASTE AUTH</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="#">HAZARDOUS WASTE AUTH</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="#">ISO 14001</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="#">ASH Utilisation</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="#">NBEM Doc</a></li>
+                                 <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">MTP</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">OPI Report</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">OH Schedule</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Report</a>
+                                                      <ul class="qmsub">
+                                                      <li class="dropdown"><a class="qmitem-s" href="http://10.1.169.227:8082/Daily_mom_report.aspx">Daily</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Monthly</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Yearly</a></li>
+                                                      </ul>
+                                                      </li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">OH Diary</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Condition Monitoring</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">ISO Certification</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">ENGG Declaration</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Punch List</a></li> 
+                                     <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Project</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Project CONS.</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">ELECT.</a></li>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">MECH.</a></li> 
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">ASH DYKE</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Status</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Rolling Plan</a></li> 
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Civil</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Plant</a></li> 
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Township</a></li>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Chemistry</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Report</a> 
+                                                 <ul class="qmsub">
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Daily</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Monthly</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Yearly</a></li>
+                                                      </ul>
+                                                      </li> 
+                                             <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">MGR</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Report</a>
+                                                 <ul class="qmsub">
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Daily Rake Status</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Daily Coal Receipt</a></li>
+                                                      <li class="dropdown"><a class="qmitem-s" href="#">Monthly Coal Receipt</a></li>
+                                                      </ul>
+                                                      </li> 
+                                             <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">TS</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Record Notes</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">MOU</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">RMCM</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">SMC</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">APEX</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">OTHER</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">HR</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Manpower Data</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">CSR</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">MOM Unionassociation</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Finance</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Report</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Vigilance</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Policy</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Circular</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Medical</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Monthly Report</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Medical Camps</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                        <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Safety</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Safety Report</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">MOM-Plant Safety</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">MOM-Fire Safety</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                         <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">BE</a>
+                                         <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="#">QC</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">PC</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">SS</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">PIP</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Customer MEET</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">Suggestion</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">IBEM</a>
+                                            <li class="dropdown"><a class="qmitem-s" href="#">IMS</a>
+                                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                  <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                </ul>
+                </li>
+                    <li class="dropdown"><a  class="qmitem-m qmparent opener">Departments</a>
+                        <ul class="qmsub">
+                       <!--     <li class="dropdown"><a class="qmitem-s" style=" text-decoration:none;" href="dept/dept_it.aspx?dept=HEAD OF PROJECT"><img src="image/admin.png" width="15" alt="Head Of Project" />Head Of Project</a></li>        -->
+                            <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=O%26M">O & M</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=O%26M">O & M</a>
+                                    <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="OperatMaintPage.aspx">O & M Report</a></li>
+                                        <li class="dropdown"><a class="qmitem-s" href="dept/Resources.aspx">Resources</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="qmitem-s" href="http://10.1.169.238/">MAINTENANCE</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_operation.aspx">Operation</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=R%26M">R & M</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=MGR">M G R</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=C %26 I MAINT">C & I MAINT</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=CHEMISTRY">CHEMISTRY</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=FUEL HAND">CHP</a>
+                                    <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="CHPReports.aspx">CHP Report</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=MECH MAINT">MECH MAINT</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/DeptEM.aspx">ELEC MAINT</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/Dept_EEMG.aspx">EEMG</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="http://10.1.169.227:8082/Default.aspx" target="_blank">MTP</a></li>
+                                    <!--
+                                    <ul class="qmsub">
+                                            <li class="dropdown"><a class="qmitem-s" href="EEMG-MTP.aspx">EEMG-MTP Report</a></li>
+                                        </ul>-->
+                                    </li>
+                                      <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=COMMISSIONING">COMMISSIONING</a></li>
+                                    <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Non O & M</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=C%26M">C & M</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=HR">HR</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/DeptIT.aspx">IT</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=FINANCE">Finance</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=P %26 S">P & S</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=STORES">Store</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=FQA">FQA</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=FES">FES</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="http://10.1.169.227:2123">Safety</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=TECH SERVICES">Tech Service</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=MEDICAL">Medical</a></li>
+                                  
+                                    <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="qmitem-s" href="javascript:void(0)">Project Group</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=PROJ CONST">Project</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=ELECT ERECT">Elect Erect</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="dept/dept_it.aspx?dept=CIVIL CONST">Civil Const</a></li>
+                                    <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0)">Imp Links</a>
+                        <ul class="qmsub">
+                            <li class="dropdown">
+                                <dl class="qmmulti qmml0">
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.68/rtintpc">RTI NTPC</a></dd>
+                      
+                                    
+                                    <dd>
+                                        <a class="qmitem-s" href="https://webess.ntpclakshya.co.in/irj/portal">ESS</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="MySearch.aspx">Search Employee</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://mail.ntpc.co.in/">NTPC Mail</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="loader.aspx?requestedpage=projects">NTPC Plant</a></dd>
+                                  
+                                                                        <dd>
+                                        <a class="qmitem-s" href="database/dop/DOP_2011.pdf">DOP 2011</a></dd>
+                                    
+                                    <dd>
+                                        <a class="qmitem-s" href="database/dop/DOP_2005.pdf">DOP 2005</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.5.2:8001/webntpc/hr_homepage_files/corp_hr_circulars.jsp">HR Circular(CC)</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://191.254.198.107/gdams/realview_new2.asp">GDAMS</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.68/doctracker/index.htm">DOC Tracker</a></dd>
+                                    
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.0.173/webntpc/hr_homepage_files/transfer_list.php">Transfer List</a></dd>
+                                    <dd>
+                                        
+                                        <a class="qmitem-s" href="ftp://10.1.168.1:3030">Software Download</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.68/ccAuth/Authenticate/Login">Transit Camp Booking- NEW</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.68/transitcamp">Transit Camp Booking- OLD</a></dd>
+                                        <dd>
+                                        <a class="qmitem-s" href="http://cchrportal.ntpc.co.in:8080/apex/f?p=105:2:1884608809711022::NO:::">CC DIRECTORY</a></dd>
+                                        <dd>
+                                        <a class="qmitem-s" href="CCTV Camera.aspx">CCTV Camera</a></dd>
+                                        <dd>
+                                        <a class="qmitem-s" href="https://mail.ntpc.co.in:9071/zimbraAdmin/">Zimbra Admin</a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="https://mail.ntpc.co.in:6443/preset/login.pl">Zimbra mail password reset link</a>
+                                        
+                                    </dd>
+                                        <dd>
+                                        <a class="qmitem-s" href="http://10.1.254.1:8080/ntpcd/Login.jsp">NTPC Messaging Services </a></dd>
+
+                                          <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.223/mail/login.asp">NTPC Mail Support(for IT Dept only) </a></dd>
+                                        <dd>
+                                        <a class="qmitem-s" href="http://10.1.168.12:8980/opennms/login.jsp">OpenNMS(for IT Dept only) </a></dd>
+                                    <dd>
+                                        <a class="qmitem-s" href="http://cc.ntpclakshya.co.in/ccit/Default.aspx">CC-IT Intranet </a></dd>
+                                     <dd>
+                                        <a class="qmitem-s" href="http://10.0.8.184/JeevanRekha/">HMS-Jeevan Rekha</a></dd>
+                                    
+                                        
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0)">Useful Links</a>
+                        <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="kbunl_imagemap/kbunl-imagemap.html">KBUNL Colony Layout</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="SapTcodeNew.aspx">SAP Tcodes</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.0.5.2:8001/webntpc/general_info_files/pmi_calendar.pdf">PMI Calender</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="ntpc_geet/ntpcgeet.htm">NTPC Geet</a></li>
+                            <%--<li class="dropdown"><a class="qmitem-s" href="http://191.254.20.232/mis/other/nice%20presentations/nicepresentation.htm">Nice Presentation</a></li>--%>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.1/MapOfIndia/Main.htm">Map of India</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="loader/bmi.html">BMI</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="Dictionary.aspx">Dictionary</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="hindipage.aspx">Hindi</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.1/database/circulars/cartridgeMaterial%20Code.pdf">Cartridge Meterial Code</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.12:2910/">CISF Material Exit</a></li>
+                            <%--<li class="dropdown"><a class="qmitem-s" href="database/Air_Schedule_Patna.pdf" target="_top">Air Schedule</a></li>--%>
+                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0);">Project</a>
+                        <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="javascript:void(0);">Stage-1</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="database/muzaffarpur Stg I_synopsis 11.02.11.pdf" target="_top">Synopsis</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=fotogal">Photo Gallery</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="qmitem-s" href="javascript:void(0);">Stage-2</a>
+                                <ul class="qmsub">
+                                    <li class="dropdown"><a class="qmitem-s" href="http://191.254.1.42/cmg/region.php?region=ER-I">NTPC CMG</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=prt">PRT MOM</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=exrep">Exception Report</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=fr">FR 2x195 MW</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="database/muzaffarpur Stg II_synopsis 11.02.11.pdf">Synopsis</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=drwawing2">Drawing</a></li>
+                                    <li class="dropdown"><a class="qmitem-s" href="loader.aspx?requestedpage=fotogal">Photo Gallery</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><span class="qmdivider qmdividerx"></span></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0)">Reports</a>
+                        <ul class="qmsub">
+                            <%--<li class="dropdown"><a class="qmitem-s" href="NetworkReports.aspx">KBUNL Reports</a></li>--%>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.1:3838">Network Status</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="File Shair.aspx">File Sharing</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="ProfilePages.aspx">Profile</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="FeedBack.aspx">FeedBack</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="Login.aspx">IT-Support</a>
+                        <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="Login.aspx">Online Complain</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="KBUNL_Telephone_Directory-2021.pdf">KBUNL Directory</a></li>
+                           <li class="dropdown"><a class="qmitem-s" href="loader/Laptop Support Methodology.pdf">Laptop Escalation Matrix(Progressive)</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="database/circulars/CCS-DELL Esclation Matrix NTPC_Web Portal.pdf">Laptop Escalation Matrix(CCS)</a></li>
+                             <li class="dropdown"><a class="qmitem-s" href="database/circulars/Dell_Escalation_Matrix.pdf">Laptop Escalation Matrix(DELL)</a></li>
+
+                            
+                            <%--<li class="dropdown"><a class="qmitem-s" href="Directory/directory11.pdf">Directory</a></li>--%>
+                        </ul>
+                    </li>
+                    <%--<li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0)">News</a>
+                        <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="http://191.254.176.250/">Live News</a></li>
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.0.5.2:8001/webntpc/corp_commn_homepage_files/News_Clips/news_clips.jsp">News Clippings</a></li>
+                            
+                        </ul>
+                    </li>--%>
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="http://10.0.120.200:2009"><img src="new.gif" alt="" style="width: 30px;height: 15px;"/>OCMS</a>
+                    <!--    <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.0.120.200:2009">OCMS</a></li>
+                        </ul>    -->
+                    </li>
+
+                    <li class="dropdown"><a class="qmitem-m qmparent" href="javascript:void(0)">Sports</a>
+                        <ul class="qmsub">
+                            <li class="dropdown"><a class="qmitem-s" href="http://10.1.168.1/dept/sportscouncil.aspx">KBUNL Sports Council</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer1" >
+        <strong> This Websites is Design and Developed by IT KBUNL &nbsp&nbsp Last updated on 05/05/2021 </strong>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

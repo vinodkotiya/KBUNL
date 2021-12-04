@@ -1,0 +1,63 @@
+﻿.header .project { color: #8f44ad; }
+.menubar { background-color: #8f44ad; }
+.ddsmoothmenu ul li a { background-color: #8f44ad !important; border-right: 1px solid #73388b !important; }
+.ddsmoothmenu ul li a:hover { background-color: #73388b!important; }
+.ddsmoothmenu { background-color: #8f44ad !important; }
+.home-rhqupdates { background-color: #8f44ad; }
+.footer .button { background-color: #8f44ad; }
+.directorybox .imgbox { border: 2px solid #8f44ad; }
+.directorybox .name { color: #8f44ad; }
+.directorycontainer .paging a.active { background-color: #8f44ad; }
+.aboutuscontent h4 { border-bottom: 5px solid #8f44ad; }
+body { background-color: #f3edf7; }
+.innerbanner .bannerpatch { filter: grayscale(100%); -webkit-filter: grayscale(100%); }
+.directorybox .email { filter: grayscale(100%); -webkit-filter: grayscale(100%); }
+.directorycontainer .filter { border: 2px solid #dfdfdf; }
+.content-outer .employee-services img { filter: grayscale(100%); -webkit-filter: grayscale(100%); }
+.updates-container .updates-content .box p a:hover { color: #8f44ad; }
+.updates-container .updates-content .box h5 a:hover { color: #8f44ad; }
+.innerbannerdept { border-bottom: 5px solid #8f44ad; }
+.innerbannerdept .bannerpatch .breadcrumb a.active { color: #8f44ad; }
+.innerbannerdept .bannerpatch .breadcrumb a:hover { color: #8f44ad; }
+.highlights h4 { border-bottom: 3px solid #8f44ad; }
+.highlights .hlcontent table .content h5 { color: #8f44ad; }
+.downloadcontent a.linkbtn.active { background-color: #8f44ad; }
+.downloadcontent a.linkbtn:hover { background-color: #8f44ad; }
+.reportcontent .reportheader { background-color: #8f44ad; }
+.clinks a:hover { color: #8f44ad; }
+.updates-container .updates-content .box.circular .circulartype { color: #8f44ad; }
+
+/*New Updates*/
+.updates-container .filter { border: 2px solid #c7a2d6; }
+.birthday-container .filter { border: 2px solid #c7a2d6; }
+.schedule-container .filter { border: 2px solid #c7a2d6; }
+.updates-container .filter a.active { background-color: #8f44ad; padding-top: 10px; padding-bottom: 10px; margin: 0px; color: #ffffff; }
+.updates-container .filter a.active:hover { color: #ffffff; }
+.updates-container .filter a:hover { color: #8f44ad; }
+.birthday-container .filter a.active { background-color: #8f44ad; padding-top: 10px; padding-bottom: 10px; margin: 0px; color: #ffffff; }
+.birthday-container .filter a.active:hover { color: #ffffff; }
+.birthday-container .filter a:hover { color: #8f44ad; }
+
+.schedule-container .filter a.active { background-color: #8f44ad; padding-top: 10px; padding-bottom: 10px; margin: 0px; color: #ffffff; }
+.schedule-container .filter a.active:hover { color: #ffffff; }
+.schedule-container .filter a:hover { color: #8f44ad; }
+
+.vmc .bottomslider li a span { border-bottom: 0.25px solid #c7a2d6; }
+.content-outer .hopbox .name { color: #8f44ad; }
+.content-outer .hopbox .designation { border-bottom: 2px solid #c7a2d6; }
+.birthday-container .updates-content h4 { color: #8f44ad; }
+.content-outer .employee-services span.imgbox { background-color: #8f44ad; }
+#calendar_Schedule .myCalendarTitle { background-color: #8f44ad; color: #ffffff; }
+.pagebutton { background-color: #8f44ad; }
+.magazinecontent .box a { background-color: #8f44ad; }
+.caltitle { background-color: #8f44ad; padding-top: 5px; padding-bottom: 5px; }
+.aboutdepartment h4 { border-bottom: 5px solid #8f44ad; }
+.deptphotogallery h4 { border-bottom: 5px solid #8f44ad; }
+.suggestionpagecontainer .suggestionform .innercontent h4 { border-bottom: 5px solid #8f44ad; }
+.suggestionpagecontainer .suggestionform .innercontent .forminputdiv .userinput .button { background-color: #8f44ad; border: 1px solid #8f44ad; }
+.photogallery .albumname { background-color: #8f44ad; }
+.opinionpollcontainer .opinionpollcontent .notavailable span { color: #8f44ad; }
+.surveycontainer .surveycontent .notavailable span { font-size: 24px; color: #8f44ad; }
+.loginpagecontainer .loginform .innercontent h4 { border-bottom: 5px solid #8f44ad; }
+.loginpagecontainer .loginform .innercontent .forminputdiv .userinput .button { background-color: #8f44ad; border: 1px solid #8f44ad; }
+.updates-container .updates-content .box.circular .date { background-color: #f3edf7; }
